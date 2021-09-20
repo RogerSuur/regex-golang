@@ -90,6 +90,9 @@ func main() {
 	mituerinevat := regexp.MustCompile(`( )(!+\?+)`)
 	inputStr = mituerinevat.ReplaceAllString(inputStr, `$2`)
 
+	kysimärk := regexp.MustCompile(`( )(\?)`)
+	inputStr = kysimärk.ReplaceAllString(inputStr, `$2`)
+
 	ylakoma := regexp.MustCompile(`( )(')( )(\w)`)
 	inputStr = ylakoma.ReplaceAllString(inputStr, ` $2$4`)
 
